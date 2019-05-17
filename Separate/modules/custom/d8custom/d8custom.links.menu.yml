@@ -1,0 +1,15 @@
+#To create admin links in the configuration
+d8custom.d8custom_settings:
+  title: Drupal 8 custom settings page
+  parent: system.admin_config_system
+  description: 'Manage automatic site maintenance tasks.'
+  route_name: d8custom.settings
+  weight: 20
+
+#To create admin links in the configuration
+d8custom.d8custom_config_settings:
+  title: Weather Configuration
+  parent: system.admin_config_system
+  description: 'Weather Configuration tasks.'
+  route_name: d8custom.config_settings
+  weight: 20

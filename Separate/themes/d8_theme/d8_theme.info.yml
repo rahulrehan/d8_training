@@ -1,0 +1,19 @@
+name: D8 Demo Theme
+Description: It's Drupal 8 custom theme developed amid training.
+author: info@info.com
+package: demo
+core: 8.x
+version: 8.x-1.x
+
+type: theme
+base theme: bartik
+regions:
+  header: Header
+  left_sidebar: Left Sidebar
+  content: Content
+  right_sidebar: Right Sidebar
+  footer: Footer
+
+libraries:
+  - d8_theme/global-styling
+

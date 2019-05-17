@@ -1,0 +1,81 @@
+d8custom.render:
+  path: '/custom-module'
+  defaults:
+    _controller: '\Drupal\d8custom\Controller\D8customController::customRender'
+    _title: 'Custom Module'
+  requirements:
+    _permission: 'access training content'
+
+d8custom.dynamic:
+  path: '/DynamicRoute/{name}'
+  defaults:
+    _controller: '\Drupal\d8custom\Controller\D8customController::dynamic_route'
+    _title: 'Dynamic Route'
+    name: 'world'
+  requirements:
+    _permission: 'access content'
+
+d8custom.node:
+  path: '/nodeload/{node}'
+  defaults:
+    _controller: '\Drupal\d8custom\Controller\D8customController::node_load'
+    _title: 'Node Aa Rahi Hai'
+  requirements:
+    _permission: 'access content'
+
+d8custom.content_type:
+  path: '/multiple-content/{node1}/{node2}'
+  defaults:
+    _controller: '\Drupal\d8custom\Controller\D8customController::content_type_load'
+    _title: 'Content Type'
+  options:
+    parameters:
+      node1:
+        type: entity:user
+      node2:
+        type: entity:node
+  requirements:
+    _permission: 'access content'
+
+d8custom.static_route:
+  path: '/static-route'
+  defaults:
+    _controller: '\Drupal\d8custom\Controller\D8customController::static_route'
+    _title: 'Static Route'
+  requirements:
+    _permission: 'access content'
+
+d8custom.settings:
+  path: '/admin/config/system/d8custom'
+  defaults:
+    _controller: '\Drupal\d8custom\Controller\D8customController::settings'
+    _title: 'My module settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+d8custom.node_routing_access:
+  path: '/nodeload-access/{node}'
+  defaults:
+    _controller: '\Drupal\d8custom\Controller\D8customController::dynamic_routing'
+    _title: 'Dynamic Routing Access'
+  requirements:
+#    _permission: 'access content'
+#    _custom_access: '\Drupal\d8custom\Controller\D8customController::entity_access_check'
+     _d8_entity_access_check: 'TRUE'
+
+d8custom.custom_form:
+  path: '/custom-form'
+  defaults:
+    _form: '\Drupal\d8custom\Form\D8SimpleForm'
+    _title: 'Custom Form'
+  requirements:
+    _permission: 'access content'
+
+
+d8custom.config_settings:
+  path: '/admin/config/system/weather-config'
+  defaults:
+    _form: '\Drupal\d8custom\Form\WeatherConfiguration'
+    _title: 'Weather Configuration'
+  requirements:
+    _permission: 'administer site configuration'

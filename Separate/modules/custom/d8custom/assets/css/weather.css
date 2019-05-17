@@ -1,0 +1,4 @@
+#weather-wrapper{width:100%; display:block; background:#8787ff;}
+.weather-row{width:100%;display:flex; }
+.weather-label {font-weight:bold;}
+.weather-value, .weather-label{width:50%;font-size:16px;color:#fff;}

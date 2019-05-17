@@ -1,0 +1,5 @@
+access training content:
+  title: 'Drupal8 Custom Permission'
+  description: 'Drupal8 Custom Permission for training content.'
+  restrict access: TRUE
+
