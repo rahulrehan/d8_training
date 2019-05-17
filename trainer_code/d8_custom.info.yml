@@ -1,0 +1,6 @@
+name: D8 Custom
+description: Drupal 8 custom module.
+package: custom
+version: 8.x-1.x
+core: 8.x
+type: module

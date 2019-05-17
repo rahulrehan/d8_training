@@ -1,0 +1,13 @@
+{
+    "name": "piyuesh23/d8_custom",
+    "type": "module",
+    "require": {
+        "antoineaugusti/google-books": "^0.3.0"
+    },
+    "authors": [
+        {
+            "name": "Piyuesh Kumar",
+            "email": "piyuesh23@qed42.com"
+        }
+    ]
+}

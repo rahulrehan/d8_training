@@ -1,0 +1,66 @@
+d8_custom.static_content:
+  path: '/static-content'
+  defaults:
+    _controller: 'Drupal\d8_custom\Controller\D8CustomController::staticContent'
+    _title: 'Static Content'
+  requirements:
+    _permission: 'access training content'
+
+d8_custom.simple_form:
+  path: '/simple-form'
+  defaults:
+    _form: 'Drupal\d8_custom\Form\D8SimpleForm'
+    _title: 'Simple Form'
+  requirements:
+    _permission: 'access training content'
+
+d8_custom.dynamic_content:
+  path: '/dynamic-content/{arg}'
+  defaults:
+    _controller: 'Drupal\d8_custom\Controller\D8CustomController::dynamicContent'
+    _title: 'Dynamic Content'
+    arg: 1
+  requirements:
+    _permission: 'access content'
+
+d8_custom.entity_content:
+  path: '/entity-content/{node}'
+  defaults:
+    _controller: 'Drupal\d8_custom\Controller\D8CustomController::entityContent'
+    _title: 'Entity Content'
+    node: 1
+  requirements:
+#    _permission: 'access content'
+#    _custom_access: 'Drupal\d8_custom\Controller\D8CustomController::entityAccessCheck'
+    _d8_entity_access_check: 'TRUE'
+
+d8_custom.entity_content_multiple:
+  path: '/entity-multiple-content/{node1}/{node2}'
+  defaults:
+    _controller: 'Drupal\d8_custom\Controller\D8CustomController::entityContentMultiple'
+    _title: 'Entity Content'
+    node1: 1
+    node2: 2
+  options:
+    parameters:
+      node1:
+        type: entity:node
+      node2:
+        type: entity:node
+  requirements:
+    _permission: 'access content'
+d8_custom.another_static_content:
+  path: '/another-static-content'
+  defaults:
+    _controller: 'Drupal\d8_custom\Controller\D8CustomController::anotherStaticContent'
+    _title: 'Another Static Content'
+  requirements:
+    _permission: 'access content'
+
+d8_custom.weather_app_config:
+  path: '/admin/weather-config'
+  defaults:
+    _form: 'Drupal\d8_custom\Form\D8WeatherConfigForm'
+    _title: 'Weather App Config Form'
+  requirements:
+    _permission: 'access content'

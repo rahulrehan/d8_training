@@ -1,0 +1,18 @@
+services:
+  d8_custom.entity_access_check:
+    class: 'Drupal\d8_custom\Access\D8EntityAccessCheck'
+    tags:
+      - { name: 'access_check', applies_to: '_d8_entity_access_check' }
+
+  d8_custom.dic_table_wrapper:
+    class: 'Drupal\d8_custom\DicTableWrapper'
+    arguments: [ '@database' ]
+
+  d8_custom.weather_manager:
+    class: 'Drupal\d8_custom\WeatherManager'
+    arguments: [ '@http_client', '@config.factory' ]
+
+  d8_custom.response_subscriber:
+    class: 'Drupal\d8_custom\EventSubscriber\ResponseSubscriber'
+    tags:
+      - { name: 'event_subscriber' }
