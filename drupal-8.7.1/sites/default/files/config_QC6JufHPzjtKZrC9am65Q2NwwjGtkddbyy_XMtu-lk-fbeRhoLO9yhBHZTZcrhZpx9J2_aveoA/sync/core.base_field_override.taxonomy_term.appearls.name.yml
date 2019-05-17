@@ -1,0 +1,18 @@
+uuid: 1c3c5aa1-b457-42d7-ae55-93cdb61cbe0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.appearls
+id: taxonomy_term.appearls.name
+field_name: name
+entity_type: taxonomy_term
+bundle: appearls
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

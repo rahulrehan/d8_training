@@ -1,0 +1,20 @@
+uuid: 23d061a9-3ae7-48ef-befc-1a6d57358660
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.appearls
+  module:
+    - path
+id: taxonomy_term.appearls.path
+field_name: path
+entity_type: taxonomy_term
+bundle: appearls
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,10 @@
+#To create Tabs menu
+d8custom.Tab1:
+  route_name: d8custom.render
+  title: 'First Static Content'
+  base_route: d8custom.renders 
+
+d8custom.Tab2:
+  route_name: d8custom.static_route
+  title: 'Second Static Content'
+  base_route: d8custom.renders

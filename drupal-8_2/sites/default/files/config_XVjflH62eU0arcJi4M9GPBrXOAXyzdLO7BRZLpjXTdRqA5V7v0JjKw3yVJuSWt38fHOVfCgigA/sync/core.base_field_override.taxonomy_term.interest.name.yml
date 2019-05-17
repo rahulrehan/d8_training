@@ -1,0 +1,18 @@
+uuid: 9b82b9be-c74b-40b6-8ea3-559e270810ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.interest
+id: taxonomy_term.interest.name
+field_name: name
+entity_type: taxonomy_term
+bundle: interest
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

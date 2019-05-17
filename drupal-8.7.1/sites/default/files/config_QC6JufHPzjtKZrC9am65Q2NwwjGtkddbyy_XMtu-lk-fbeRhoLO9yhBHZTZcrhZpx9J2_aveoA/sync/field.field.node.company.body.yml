@@ -1,0 +1,22 @@
+uuid: 0380cc10-a05f-462f-bb80-3484ec027230
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.company
+  module:
+    - text
+id: node.company.body
+field_name: body
+entity_type: node
+bundle: company
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

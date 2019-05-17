@@ -1,0 +1,8 @@
+label: 'Trips Products for Spanish'
+display:
+  default:
+    display_title: 'Trips Products for Spanish'
+    display_options:
+      title: 'Trips Products for Spanish'
+  page_1:
+    display_title: 'Trips Products for Spanish'

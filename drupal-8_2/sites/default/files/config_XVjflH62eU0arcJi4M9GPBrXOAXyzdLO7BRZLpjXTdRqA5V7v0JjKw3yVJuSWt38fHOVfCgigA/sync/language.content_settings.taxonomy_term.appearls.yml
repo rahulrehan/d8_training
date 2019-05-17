@@ -1,0 +1,18 @@
+uuid: 327d2171-b710-4c04-9d8c-08c522ca995f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.appearls
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.appearls
+target_entity_type_id: taxonomy_term
+target_bundle: appearls
+default_langcode: site_default
+language_alterable: false

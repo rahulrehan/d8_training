@@ -1,0 +1,8 @@
+book.render:
+  path: '/custom-module'
+  defaults:
+    _controller: ''
+    _title: 'Custom Module'
+  requirements:
+    _permission: 'access content'
+

@@ -1,0 +1,22 @@
+uuid: 30f112af-74d1-46b6-9055-9cd25078f229
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - serialization
+    - user
+id: entity.node
+plugin_id: 'entity:node'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+    - PATCH
+  formats:
+    - json
+    - xml
+  authentication:
+    - cookie

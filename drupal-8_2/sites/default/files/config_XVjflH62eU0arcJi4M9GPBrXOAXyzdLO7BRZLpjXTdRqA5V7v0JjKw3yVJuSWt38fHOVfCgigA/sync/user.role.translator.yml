@@ -1,0 +1,19 @@
+uuid: b6691efc-90e8-4889-90d7-84d1544599e4
+langcode: en
+status: true
+dependencies: {  }
+id: translator
+label: translator
+weight: 3
+is_admin: null
+permissions:
+  - 'access contextual links'
+  - 'create content translations'
+  - 'delete content translations'
+  - 'translate any entity'
+  - 'translate article node'
+  - 'translate block_content'
+  - 'translate interest taxonomy_term'
+  - 'translate menu_link_content'
+  - 'translate page node'
+  - 'update content translations'

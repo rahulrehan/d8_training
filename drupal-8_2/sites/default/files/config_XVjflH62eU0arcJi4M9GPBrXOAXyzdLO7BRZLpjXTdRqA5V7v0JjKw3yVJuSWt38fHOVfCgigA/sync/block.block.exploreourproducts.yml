@@ -1,0 +1,25 @@
+uuid: 38b40ae7-1a27-426b-98f4-e4c9e660e5e7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c8ce5e7f-eb21-4d55-9148-6253c61634af'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: exploreourproducts
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:c8ce5e7f-eb21-4d55-9148-6253c61634af'
+settings:
+  id: 'block_content:c8ce5e7f-eb21-4d55-9148-6253c61634af'
+  label: 'Explore our products'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

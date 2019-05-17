@@ -1,0 +1,29 @@
+uuid: 40cac04f-46ed-42e6-885d-8780c8e9237f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.company.body
+    - node.type.company
+  module:
+    - text
+    - user
+id: node.company.default
+targetEntityType: node
+bundle: company
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

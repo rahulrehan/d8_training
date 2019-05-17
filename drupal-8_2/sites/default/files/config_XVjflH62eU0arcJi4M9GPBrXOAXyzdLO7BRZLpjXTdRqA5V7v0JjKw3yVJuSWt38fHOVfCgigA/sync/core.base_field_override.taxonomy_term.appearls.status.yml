@@ -1,0 +1,22 @@
+uuid: 8eaadfcf-d815-4550-a1f9-ebe1848b281c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.appearls
+id: taxonomy_term.appearls.status
+field_name: status
+entity_type: taxonomy_term
+bundle: appearls
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
