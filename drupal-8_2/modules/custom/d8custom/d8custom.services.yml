@@ -16,3 +16,7 @@ services:
     class: 'Drupal\d8custom\EventSubscriber\D8Events'
     tags:
       - { name: 'event_subscriber' }
+
+  d8custom.node_custom_block_service:
+    class: 'Drupal\d8custom\D8NodeCustomBlock'
+    arguments: ['@database']
