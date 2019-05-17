@@ -1,4 +1,6 @@
 <?php
+use Drupal\d8custom\Event\D8NodeInsertEvent;
+use Drupal\node\Entity\Node;
 
 function d8custom_theme() {
   return [
@@ -12,4 +14,11 @@ function d8custom_theme() {
       ],
     ],
   ];
+}
+
+function d8custom_node_insert(Node $node) {
+  /** @var \Symfony\Component\EventDispatcher\EventDispatcher $event_dispatcher */
+  $event_dispatcher = \Drupal::service('event_dispatcher'); // It's Symphony inbuild service.
+  $event = new D8NodeInsertEvent($node);
+  $event_dispatcher->dispatch(D8NodeInsertEvent::NODE_INSERT, $event);
 }

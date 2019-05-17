@@ -20,7 +20,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class WeatherBlock extends BlockBase implements ContainerFactoryPluginInterface{
   private $weatherManager;
-
+  // Override the block base constructor
   // Added $weather_manager by own in the below constructor to get our service instance
   public function __construct(array $configuration, $plugin_id, $plugin_definition, D8CustomWeatherConfig $weather_manager) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
