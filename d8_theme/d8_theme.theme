@@ -1,0 +1,15 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+function d8_theme_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['site_slogan'] = [
+    '#type' => 'textfield',
+    '#title' => 'Site Slogan',
+    '#default_value' => theme_get_setting('site_slogan'),
+  ];
+}
+
+function d8_theme_preprocess_page(&$variables) {
+  $variables['site_slogan'] = theme_get_setting('site_slogan');
+}
