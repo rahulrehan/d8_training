@@ -5,36 +5,44 @@ namespace Drupal\d8custom\Plugin\Block;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Block\BlockPluginInterface;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\d8custom\D8NodeCustomBlock;
+use Drupal\Core\Session\AccountProxy;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface; 
 
 /**
- * Provides a 'Node Custom' Block.
+ * Provides a 'Fetch User' Block.
  *
  * @Block(
- *   id = "node_custom_block",
- *   admin_label = @Translation("Node Custom Block"),
+ *   id = "fetch_user_data_block",
+ *   admin_label = @Translation("Fetch User Data Block"),
  *   category = @Translation("Custom"),
  * )
  */
-class NodeCustomBlock extends BlockBase implements ContainerFactoryPluginInterface{
+class FetchUserDataBlock extends BlockBase implements ContainerFactoryPluginInterface{
 
-  private $nodeCustomManager;
+  private $fetchUserDataManager;
 
   // Override the block base constructor
-  // Added $nodeCustom_manager by own in the below constructor to get our service instance
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, D8NodeCustomBlock $nodeCustom_manager) {
+  // Added $fetch_user_data_manager by own in the below constructor to get our service instance
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, AccountProxy $fetch_user_data_manager) {
+
     parent::__construct($configuration, $plugin_id, $plugin_definition);
-    $this->nodeCustomManager = $nodeCustom_manager;	
+
+    $this->fetchUserDataManager = $fetch_user_data_manager;
+	
   }
 
   public function build() {
     return array (
-      '#markup' => $this->nodeCustomManager->fetchNode()['markup'],
+      '#markup' => $this->fetchUserDataManager->getEmail(),
       '#cache' => array(
-        'tags' => array($this->nodeCustomManager->fetchNode()['tags'], 'node_list'),
-      ),
+        'tags' => array(
+          'node_list',
+        ),
+        'contexts' => array(
+          'user',
+        )
+      )
     );
   }
 
@@ -44,7 +52,7 @@ class NodeCustomBlock extends BlockBase implements ContainerFactoryPluginInterfa
       $configuration,
       $plugin_id,
       $plugin_definition,
-      $container->get('d8custom.node_custom_block_service') //from service name in service.yml
+      $container->get('current_user') //from service name in service.yml
     );
   }
 }

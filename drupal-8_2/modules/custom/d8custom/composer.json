@@ -1,0 +1,11 @@
+{
+    "name": "training/d8custom",
+    "description": "first composer file",
+    "authors": [
+        {
+            "name": "Rahul Rehan",
+            "email": "info@info.com"
+        }
+    ],
+    "require": {}
+}

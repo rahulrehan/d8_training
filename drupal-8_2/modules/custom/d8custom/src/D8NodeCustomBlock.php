@@ -12,13 +12,13 @@ class D8NodeCustomBlock {
 
   public function fetchNode() {
    $build = [];
-   $output = '';
    $result = $this->database->select('node_field_data', 'nfd') 
-     ->fields('nfd', array('title')) 
+     ->fields('nfd', array('nid', 'title')) 
      ->execute() 
      ->fetchAll();
    foreach($result as $value) {
-     $output .= '|' . $value->title;
+     $output['markup'] .= '|' . $value->title;
+     $output['tags'] .= 'node'.$value->nid;
    }
 
    return $output;
